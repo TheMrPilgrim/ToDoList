@@ -1,50 +1,26 @@
+import java.util.GregorianCalendar;
 public class FILERECORD
 {
-   char descrizione;
-   short svolgimento;
-   short giorno_scadenza;
-   short mese_scadenza;
-   short anno_scadenza;
-   short giorno_completamento;
-   short mese_completamento;
-   short anno_completamento;
+   String descrizione;
+   int svolgimento;
+   GregorianCalendar data_scadenza;
+   GregorianCalendar data_svolgimento;
    
-   public FILERECORD(){
+   public FILERECORD(String d){     //non finito solo la inizializzazione
+      this.descrizione = d;
+      this.svolgimento = 0;
+      this.data_scadenza = new GregorianCalendar(); 
+      this.data_svolgimento = new GregorianCalendar();
     }
    
-   public void setsvolgimento(short svolgimento){
-   this.svolgimento=svolgimento;
-   }
+   public void setDescrizione(String d){this.descrizione = d;}
+   public void setSvolgimento(int sv){this.svolgimento = sv;}
+   public void setDataScadenza(GregorianCalendar dt){this.data_scadenza = dt;}
+   public void setDataSvolgimento(GregorianCalendat dt){this.data_svolgimento = dt;}
    
-   public short getsvolgimento(){
-   return svolgimento; 
-   }
-    
-   public void setgiorno_scadenza(short giorno_scadenza){
-   this.giorno_scadenza=giorno_scadenza;
-   }
-
-   public short getgiorno_scadenza(){
-   return giorno_scadenza; 
-    } 
-    
-    
-   public void setmese_scadenza(short mese_scadenza){
-   this.mese_scadenza=mese_scadenza;
-   }
+   public String getDescrizione(){return this.descrizione;}
+   public int getSvolgimeto(){return this.svoglimento;}
+   public GregorianCalendar getDataScadenza(){return this.data_scadenza;}
+   public GregorianCalendar getDataSvolgimento(){return this.data_svolgimento;}
    
-   public short getmese_scadenza(){
-   return mese_scadenza; 
-    } 
-    
-    
-   public void anno_scadenza(short anno_scadenza){
-   this.anno_scadenza=anno_scadenza;
-   }
-   
-   public short getanno_scadenza(){
-   return anno_scadenza; 
-    } 
-    
-    
 }
